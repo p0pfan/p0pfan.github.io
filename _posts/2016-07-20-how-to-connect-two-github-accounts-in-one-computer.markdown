@@ -27,6 +27,7 @@ tags:
     - 如果没有，则使用`ssh-add xxx`来添加私钥。其中`xxx`表示私钥的名称。
 
 3. 在`.ssh`文件下添加一个`config`文件。其中内容为：
+
 ```shell
 Host NAME1
     HostName 对应的域名(eg:github.com)
@@ -37,13 +38,15 @@ Host NAME2
     HostName 对应的域名(eg:github.com)
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/私钥的名称
-
 ```
+
 - **NOTE**
     - config的文件配置需要注意的是NAME1和NAME2；
     - NAME1和NAME2配置的不和对应的`HOSTNAME`对应的话，
         - 比如说`NAME1`是`work`;`HostName`是`github.com`,那么在clone的时，如果使用`git clone git@github.com:xxx`时可能会出现没有权限克隆的问题。但是使用`git clone git@work:xxx`则可以正常。
         （**这个没准是个别情况，我没有做过多的研究，刚好使用的时候碰到了，就说明一下。**）
+![](https://ooo.0o0.ooo/2016/07/20/578f777c5211a.jpg)
+
 
 #### 4. 测试连接情况
 - 指令：`ssh -T git@xxx` 或者`ssh -T v git@xxx` (其中xxx表示config中的NAME1或者NAME2,其实你们也可以测试一下xxx写HostName的情况，按理说应该也是可以的。但是也有可能出现我上面note说明的情况)
