@@ -4,7 +4,7 @@ title:      "如何在同一台电脑上连接不通的github账号"
 subtitle:   "多个github账号怎么办？"
 date:       2016-07-20
 author:     "p0pfan"
-header-img: "img/posts/2016-07-20-2016-07-20-how-to-connect-two-github-accounts-in-one-computer.jpg"
+header-img: "img/posts/2016-07-20-how-to-connect-two-github-accounts-in-one-computer.jpg"
 catalog:    true
 tags:
     - github
